@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>RangeSelectのサンプル</title>
+        <!-- bootstrapの読み込み -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- React,ReactDOM,babel,recoilの読み込み -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/recoil@0.7.4/umd/index.min.js"></script>
+        
+        <!--必要なクラスの読み込み-->
+        <script>
+            const {useEffect,useRef,useState} = React;
+            const {RecoilRoot,useRecoilState,atom} = Recoil;
+        </script>
+        <!--必要なファイルの読み込み-->
+        <script src="./rangeSelect/pointer.js"></script>
+        <script src="./rangeSelect/selectData.js"></script>
+        <script src="./rangeSelect/cursorRect.js" type="text/babel"></script>
+
+
+    </head>
+    <body>
+        <h1>RangeSelectの使い方</h1>
+        <h2>First Sample</h2>
+        <p>ただ枠線を引くだけ</p>
+        <div id="first_sample"></div>
+        <script src="./sample/first.js" type="text/babel"></script>
+        <script type="text/babel">
+            ReactDOM.render(<FirstSample />,document.getElementById('first_sample'));
+        </script>
+
+        <h2>Second Sample</h2>
+        <p>ただ色を変えるだけ</p>
+        <div id="second_sample"></div>
+        <script src="./sample/second_select_component.js" type="text/babel"></script>
+        <script src="./sample/second.js" type="text/babel"></script>
+        <script type="text/babel">
+            ReactDOM.render(<SecondSample />,document.getElementById('second_sample'));
+        </script>
+
+        <h2>Third Sample</h2>
+        <p>変更した部分を配列としてコンソール出力する</p>
+        <div id="third_sample"></div>
+        <script src="./sample/third_select_component.js" type="text/babel"></script>
+        <script src="./sample/third.js" type="text/babel"></script>
+        <script type="text/babel">
+            ReactDOM.render(<ThirdSample />,document.getElementById('third_sample'));
+        </script>
+
+    </body>
+</html>
