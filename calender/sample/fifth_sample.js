@@ -48,5 +48,5 @@ const selectDataDeal = (data) =>{
 
 //初期データを入れるための関数・この名前で固定
 const getDefaultSelectData = () =>{
-    return ['2000-1-1','2000-1-2'];
+    return ['2000-1-1','2000-1-2','2000-1-3'];
 }
